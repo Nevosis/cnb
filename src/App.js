@@ -5,10 +5,22 @@ import './App.css';
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
+
+const components = {
+  Header() {
+    return (
+      <div style={{ padding:20, textAlign:'center', justifyContent:'center' }}>
+        C&B bitches
+        <br/>
+        (en vrai ça pourrait etre un img)
+      </div>
+    );
+  },
+}
 function App() {
 
   return (
-    <Authenticator>
+    <Authenticator components={components}>
       {({ signOut, user }) => (
         <div className="App">
           <img src={logo} className="App-logo" alt="logo" />
